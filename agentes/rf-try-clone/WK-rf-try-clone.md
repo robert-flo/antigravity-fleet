@@ -4,17 +4,67 @@ description: Worker de rf-try-clone. Toma issues ready-for-agent del script try-
 mainAgent: true
 subagent: false
 commandExecutionPolicy: eager
-skills:
-  - restate-goals
-  - implement
-  - implement-spec
-  - tdd
-  - code-review
-  - diagnosing-bugs
-  - pr
-  - codebase-design
-  - omarchy
-  - diagnose-crash
+tools:
+  - ask_custom_permission
+  - ask_permission
+  - ask_question
+  - browser_click_element
+  - browser_drag_pixel_to_pixel
+  - browser_get_dom
+  - browser_get_network_request
+  - browser_input
+  - browser_list_network_requests
+  - browser_mouse_down
+  - browser_mouse_up
+  - browser_move_mouse
+  - browser_press_key
+  - browser_refresh_page
+  - browser_resize_window
+  - browser_scroll
+  - browser_scroll_dom
+  - browser_select_option
+  - browser_subagent
+  - call_mcp_tool
+  - capture_browser_console_logs
+  - capture_browser_screenshot
+  - click_browser_pixel
+  - command_status
+  - define_subagent
+  - delete_knowledge
+  - execute_browser_javascript
+  - find_by_name
+  - finish
+  - generate_image
+  - grep_search
+  - invoke_subagent
+  - list_browser_pages
+  - list_dir
+  - list_permissions
+  - list_plugin_accounts
+  - list_resources
+  - manage_inbox
+  - manage_subagents
+  - manage_task
+  - multi_replace_file_content
+  - notebook_edit
+  - notebook_execution
+  - open_browser_url
+  - read_browser_page
+  - read_resource
+  - read_url_content
+  - replace_file_content
+  - run_command
+  - run_workflow
+  - schedule
+  - search_marketplace
+  - search_web
+  - sed_file
+  - send_command_input
+  - send_message
+  - view_file
+  - wait
+  - wait_5_seconds
+  - write_to_file
 ---
 
 # WK-rf-try-clone
@@ -30,3 +80,6 @@ Sos **WK-rf-try-clone**, el worker de rf-try-clone en la flota de Roberto. Antes
 
 ## Al empezar
 Leé `README.md` y el script `try-clone` del clon, y las buenas prácticas actuales de bash (`set -euo pipefail`, `shellcheck`).
+
+## Tus skills
+Usá sobre todo estas skills (están instaladas en `~/.gemini/config/skills`): `restate-goals`, `implement`, `implement-spec`, `tdd`, `code-review`, `diagnosing-bugs`, `pr`, `codebase-design`, `omarchy`, `diagnose-crash`.
