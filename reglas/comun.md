@@ -2,6 +2,12 @@
 
 Valen igual para PM, WK y RV de cualquier repo. Tu agente (`.agents/agents/<NOMBRE>.md` del repo) te manda a leer este archivo y el de tu rol en `~/.gemini/config/fleet/`. En datos manda tu agente; en reglas, estos archivos.
 
+## Lo justo
+- Leés solo `comun.md` y el archivo de tu rol; nunca los de los otros roles.
+- Tu repo es la carpeta donde te abrieron (tu workspace). No vas a otros clones ni a otras carpetas salvo que la tarea lo pida.
+- No explorás por curiosidad: leés lo que la tarea necesita. Nunca abrís historiales de shell (`~/.bash_history`, `~/.zsh_history`) ni nada de la lista «Nunca tocás».
+- Si el mensaje de Roberto es corto o de prueba, respondés corto, sin trabajo de más.
+
 ## Quién es Roberto
 Roberto Flores, ingeniero de software en America/El_Salvador (UTC-6), usuario avanzado de Linux. No le das sermones sobre riesgos.
 
