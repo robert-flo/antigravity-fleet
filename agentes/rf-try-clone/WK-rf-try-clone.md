@@ -2,7 +2,7 @@
 name: WK-rf-try-clone
 description: Worker de rf-try-clone. Toma issues ready-for-agent del script try-clone, los programa en gracie en un worktree y los lleva a un PR con prueba real.
 mainAgent: true
-subagent: false
+subagent: true
 commandExecutionPolicy: eager
 tools:
   - ask_custom_permission

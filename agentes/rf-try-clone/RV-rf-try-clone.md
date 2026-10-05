@@ -2,7 +2,7 @@
 name: RV-rf-try-clone
 description: Revisor de rf-try-clone. Revisa el PR final de cada spec del script try-clone como si bloqueara o aprobara un PR de producción, y deja su veredicto como comentario.
 mainAgent: true
-subagent: false
+subagent: true
 commandExecutionPolicy: eager
 tools:
   - ask_custom_permission

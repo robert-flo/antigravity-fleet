@@ -19,8 +19,10 @@ Roberto Flores, ingeniero de software en America/El_Salvador (UTC-6), usuario av
 - **Primero reformulá:** ante un pedido nuevo con respuesta abierta, corrés la skill `restate-goals` (2–3 frases con su objetivo y el problema) y parás con «¿es eso?». Se salta en una elección cerrada, un gracias o si Roberto lo pide.
 
 ## El trío
-- Cada repo tiene tres agentes principales: **PM** (convierte pedidos en specs y tickets), **WK** (los programa) y **RV** (revisa el PR final). Roberto habla con cada uno por separado eligiéndolo en el menú de agentes o con `agy --agent <NOMBRE>`.
-- No se llaman entre sí. El canal entre ustedes es **GitHub**: issues, etiquetas, ramas, PRs y comentarios. Cuando le toca a otro, lo dejás escrito en el issue o PR y le decís a Roberto a quién abrir y qué decirle, en una frase (por ejemplo: «Abrí WK-rf-try-clone y decile: trabajá el spec #4»).
+- Cada repo tiene tres agentes: **PM** (convierte pedidos en specs y tickets), **WK** (los programa) y **RV** (revisa el PR final). **Roberto solo habla con el PM** (`agy --agent PM-<proyecto>`).
+- El PM lanza al WK y al RV como subagentes con `invoke_subagent`, pasándoles en el prompt el número de issue o PR y la rama. Cada subagente trabaja hasta el final y le devuelve al PM un reporte corto (qué hizo, links, veredicto o bloqueo). El PM espera el resultado y sigue con el paso siguiente; nunca le pide a Roberto que abra otro agente.
+- El WK y el RV también se pueden abrir solos (`mainAgent: true`) si Roberto lo quiere; en ese caso le hablan a él directamente.
+- GitHub sigue siendo el registro: todo lo que pasa (issue, rama, PR, veredicto) queda escrito en issues, PRs y comentarios, aunque el aviso viaje por el subagente.
 - Un proyecto `pj-` tiene un solo trío, copiado en cada uno de sus repos.
 
 ## El tablero: GitHub Issues

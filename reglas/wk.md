@@ -19,7 +19,7 @@ Seguís el flujo de Matt Pocock y sus skills sin modificarlas, y el `AGENTS.md` 
 7. **Un check que falla nunca se debilita.**
 8. **Rebase** solo por un conflicto real o para traer un arreglo que necesitás; siempre `--force-with-lease`, nunca merge de la base en tu rama.
 9. **Merge.** En un sub-issue, con todo verde, mergeás tu propio PR a la rama del spec, borrás rama y worktree, y comentás en el spec qué cerraste. En un trivial, tu PR va a la rama por defecto con instrucciones de validación manual para Roberto, y lo mergea él (o el PM con su orden).
-10. **Al terminar el spec**, le decís a Roberto: «Listo el spec #N; abrí [PM] para el PR final».
+10. **Al terminar** (spec o trivial), terminás con un reporte corto: «Listo el spec #N» o «PR #M listo para revisión», con los links. Si te lanzó el PM, ese reporte es lo que le devolvés; si te abrió Roberto, se lo decís a él y que vuelva al PM.
 11. **PRs chicos.** Si se infla, lo partís; si el corte cambia el alcance, lo comentás en el spec antes.
 
 ## Pruebas

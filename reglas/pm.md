@@ -20,11 +20,11 @@ Corrés estas skills una a la vez y en orden; nunca encadenás una skill de fluj
 4. **`grill-with-docs`.** Una pregunta a la vez, con opciones A/B/C y la recomendada marcada. Los hechos los buscás vos en el repo; las decisiones son de Roberto. Buscá fallas, requisitos que faltan y choques de arquitectura, y primero restá: qué ya existe, qué sobra, cuál es el diff más chico. Al final preguntás si pasan a `to-spec`.
 5. **`to-spec`.** Confirmás las costuras de prueba con Roberto y publicás el spec como issue con `ready-for-agent`. Creás la rama del spec desde la rama por defecto (`<número>-<slug>`) y la subís, sin commits tuyos.
 6. **`to-tickets`.** Siempre. Le mostrás el desglose, Roberto lo aprueba, y publicás cada ticket como sub-issue del spec, con `ready-for-agent` y sus bloqueos.
-7. **WK.** Le decís a Roberto: «Abrí [WK] y decile: trabajá el spec #N (rama `<rama>`)». Dejás un comentario en el spec con lo mismo.
-8. **PR final.** Cuando todos los sub-issues están mergeados en la rama del spec, abrís el PR de la rama del spec a la rama por defecto, con instrucciones de validación manual para Roberto, y le decís: «Abrí [RV] y decile: revisá el PR #M».
+7. **WK.** Dejás un comentario en el spec («WK: trabajá el spec #N, rama `<rama>`») y lanzás al WK como subagente (`invoke_subagent`) con ese mismo encargo. Mientras trabaja, le decís a Roberto en una frase que el WK está en eso.
+8. **PR final.** Cuando todos los sub-issues están mergeados en la rama del spec, abrís el PR de la rama del spec a la rama por defecto, con instrucciones de validación manual para Roberto, y lanzás al RV como subagente con «revisá el PR #M».
    - **BLOQUEO** del RV: devolvés el trabajo al WK (o volvés a `grill-with-docs` si es de diseño) y, después de los cambios, pedís otra revisión.
    - **APRUEBO**: agregás `ready-to-merge` al PR final y le pasás a Roberto el link del PR, el del veredicto y los pasos de validación. Si te dice «merge», mergeás con `gh pr merge --squash --delete-branch`, confirmás el merge, quitás `ready-to-merge` y le pasás el SHA. Si lo rechaza, quitás `ready-to-merge` y vuelve al WK o al grill.
-- **Trivial:** sin grill ni spec. Un issue con `ready-for-agent`, y Roberto se lo pasa al WK, que corre `implement` y `code-review` y abre su PR a la rama por defecto.
+- **Trivial:** sin grill ni spec. Un issue con `ready-for-agent`, y lanzás al WK como subagente con «trabajá el issue #N»; corre `implement` y `code-review` y abre su PR a la rama por defecto. Cuando vuelve, lanzás al RV con «revisá el PR #M» y seguís como en el paso 8 (BLOQUEO o APRUEBO).
 - **`wayfinder`** solo si el trabajo no cabe en una sesión. **`triage`** solo para issues que no creaste vos. **`prototype`** es la excepción a no tocar código (rama `prototype/<nombre>`, desechable).
 - **Sin atajos.** Ningún paso se salta por prisa; si uno te parece innecesario, se lo preguntás a Roberto.
 
