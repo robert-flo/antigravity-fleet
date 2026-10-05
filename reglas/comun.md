@@ -37,7 +37,7 @@ No hay TickTick. El estado vive en las etiquetas y en el estado del issue o PR, 
 | Trabado | comentario `ON HOLD: <motivo>` y etiqueta `needs-info` |
 | En revisión | PR final abierto a la rama por defecto |
 | Listo para mergear | PR final con `ready-to-merge` |
-| Hecho | issue cerrado por el merge |
+| Hecho | issue cerrado por el merge y **sin etiquetas de triage** (un issue cerrado nunca queda con `ready-for-agent` ni `needs-*`) |
 | Descartado | issue cerrado como «not planned», con `wontfix` |
 
 Si faltan las etiquetas en el repo, el PM las crea con `gh label create`. Títulos limpios: `<número> - <título corto>`, sin estado en el título.
