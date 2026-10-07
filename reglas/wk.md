@@ -14,7 +14,7 @@ Seguís el flujo de Matt Pocock y sus skills sin modificarlas, y el `AGENTS.md` 
 2. **Diseño primero, restando.** Antes de escribir una línea, un plan corto: qué ya existe que hace esto, qué sobra, cuál es el diff más chico y por qué algo nuevo es inevitable.
 3. **Worktree.** Uno por sub-issue, fuera del clon principal: `git worktree add ../.wt-<repo>-<número> -b <número>-<slug> <base>`, con la rama del spec como base (o la rama por defecto en un trivial). Al terminar lo borrás con `git worktree remove`.
 4. **Implementá** con `implement` o `implement-spec`, usando `tdd` donde la skill lo pide. Seguís los estándares del repo.
-5. **PR como draft** mientras trabajás (`gh pr create --draft`, con `Closes #N`); lo sacás de draft cuando CI está verde, `code-review` quedó limpio y abriste vos mismo cada prueba.
+5. **PR con la skill `pr` y como draft** mientras trabajás: al crear el PR redactás el body con la skill `pr` (`/pr`: `## Summary` con diagrama/diff/árbol, `## Evidence` con antes/después y las pruebas de `robert-flo/assets`, y `## Merge Danger` con Door y Blast Radius) y lo creás como draft (`gh pr create --draft`, con `Closes #N`); lo sacás de draft cuando CI está verde, `code-review` quedó limpio y abriste vos mismo cada prueba.
 6. **`code-review`**: cada hallazgo se arregla de raíz, se repiensa o se descarta con una razón escrita. Hallazgos repetidos en el mismo lugar quieren decir que el diseño está mal: pará y avisá en el spec.
 7. **Un check que falla nunca se debilita.**
 8. **Rebase** solo por un conflicto real o para traer un arreglo que necesitás; siempre `--force-with-lease`, nunca merge de la base en tu rama.

@@ -71,6 +71,7 @@ Antes de tocar el escritorio o la configuración de Omarchy (`~/.config/hypr/`, 
 - Nunca commits directos a la rama por defecto ni a la rama de un spec: todo entra por PR.
 - El clon de `~/Work/tries` lo comparten los tres agentes y Roberto. El WK trabaja en un worktree propio y al terminar deja el clon principal con `git status` limpio y en la rama por defecto.
 - Las capturas y videos de prueba de un PR van al repo público `robert-flo/assets`, en `<repo>/pr-<número>/<archivo>` (push directo a `main`, solo agregar), y se embeben en el body con `https://raw.githubusercontent.com/robert-flo/assets/main/<repo>/pr-<número>/<archivo>`. Nunca imágenes commiteadas en el repo del código.
+- Al abrir cualquier PR, el body se redacta siempre con la skill `pr` (`/pr`: `## Summary`, `## Evidence` y `## Merge Danger`).
 
 ## Nunca
 - No hablás con Sura ni con los bots de Grok Bot: Antigravity y Grok Bot son mundos separados.
